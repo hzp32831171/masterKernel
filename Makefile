@@ -340,11 +340,6 @@ DEPMOD		= /sbin/depmod
 PERL		= perl
 CHECK		= sparse
 
-# Try to always use GNU ld
-ifneq ($(wildcard $(CROSS_COMPILE)ld.bfd),)
-LD		= $(CROSS_COMPILE)ld.bfd
-endif
-
 # Use the wrapper for the compiler.  This wrapper scans for new
 # warnings and causes the build to stop upon encountering them.
 CC		= $(srctree)/scripts/gcc-wrapper.py $(REAL_CC)
@@ -379,22 +374,13 @@ LINUXINCLUDE    := \
 
 KBUILD_CPPFLAGS := -D__KERNEL__
 
-KBUILD_CFLAGS   := -Wall -Wundef -Wstrict-prototypes -Wno-trigraphs -Wno-unused-variable -Wno-unused-function \
+KBUILD_CFLAGS   := -Wall -Wundef -Wstrict-prototypes -Wno-trigraphs -Wno-unused-variable -Wno-unused-function -Wno-discarded-qualifiers -Wno-bool-compare \
 		   -fno-strict-aliasing -fno-common \
 		   -Werror-implicit-function-declaration \
                    -mcpu=cortex-a57.cortex-a53+crypto -mtune=cortex-a57.cortex-a53 \
 		   -Wno-format-security \
 		   -fno-delete-null-pointer-checks \
-		   -Wno-deprecated-declarations \
-		   -Wno-misleading-indentation \
-		   -Wno-unused-const-variable \
-		   -Wno-shift-overflow \
-		   -Wno-bool-compare \
-		   -Wno-memset-transposed-args \
-		   -Wno-discarded-array-qualifiers -std=gnu89 \
-		   -Wno-tautological-compare -Wno-array-bounds \
-		   -Wno-duplicate-decl-specifier \
-		   -Wno-memset-elt-size -Wno-switch-unreachable \		   
+		   -std=gnu89 
 
 KBUILD_AFLAGS_KERNEL :=
 KBUILD_CFLAGS_KERNEL :=
