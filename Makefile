@@ -380,6 +380,8 @@ KBUILD_CFLAGS   := -Wall -Wundef -Wstrict-prototypes -Wno-trigraphs -Wno-unused-
                    -mcpu=cortex-a57.cortex-a53+crypto -mtune=cortex-a57.cortex-a53 \
 		   -Wno-format-security \
 		   -fno-delete-null-pointer-checks \
+ 		   -Wno-bool-compare \
+		   -Wno-memset-transposed-args \
 		   -std=gnu89 
 
 KBUILD_AFLAGS_KERNEL :=
