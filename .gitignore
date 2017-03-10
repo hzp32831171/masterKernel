@@ -46,6 +46,11 @@ modules.builtin
 /Module.symvers
 
 #
+# Build Output
+#
+build/
+
+#
 # Debian directory (make deb-pkg)
 #
 /debian/
