@@ -377,7 +377,7 @@ KBUILD_CPPFLAGS := -D__KERNEL__
 KBUILD_CFLAGS   := -Wall -Wundef -Wstrict-prototypes -Wno-trigraphs -Wno-unused-variable -Wno-unused-function -Wno-discarded-qualifiers -Wno-bool-compare \
 		   -fno-strict-aliasing -fno-common \
 		   -Werror-implicit-function-declaration \
-                   -mcpu=cortex-a57.cortex-a53+crypto -mtune=cortex-a57.cortex-a53 \
+                   -mcpu=cortex-a72.cortex-a53+crypto -mtune=cortex-a72.cortex-a53 \
 		   -Wno-format-security \
 		   -fno-delete-null-pointer-checks \
  		   -Wno-bool-compare \

@@ -18,6 +18,7 @@ GZFLAGS		:=-9
 LIBGCC 		:= $(shell $(CC) $(KBUILD_CFLAGS) -print-libgcc-file-name)
 
 KBUILD_DEFCONFIG := defconfig
+ARM_ARCH_OPT := -mcpu=cortex-a72.cortex-a53 -mtune=cortex-a72.cortex-a53
 
 KBUILD_CFLAGS	+= -mgeneral-regs-only
 KBUILD_CFLAGS	+= -fno-pic
