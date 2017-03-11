@@ -16,7 +16,7 @@ cd $KERNEL_DIR
 export ARCH=arm64
 export CROSS_COMPILE="/home/dev/Desktop/aarch64-cortex_a72.a53-linux-gnueabi/bin/aarch64-cortex_a72.a53-linux-gnueabi-"
 export LD_LIBRARY_PATH=home/dev/Desktop/aarch64-cortex_a72.a53-linux-gnueabi/lib/
-STRIP="/home/dev/Desktop/Toolchain/aarch64-cortex_a72.a53-linux-gnueabi/bin/aarch64-cortex_a72.a53-linux-gnueabi-strip"
+STRIP="/home/dev/Desktop/aarch64-cortex_a72.a53-linux-gnueabi/bin/aarch64-cortex_a72.a53-linux-gnueabi-strip"
 rm -rf $KERNEL_DIR/build
 make clean
 make masterKernel_defconfig
